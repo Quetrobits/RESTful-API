@@ -1,4 +1,5 @@
 const users = [];
+const { validateEmail } = require('../utils/emailValidator');
 
 const getAllUsers = (req, res) => {
     res.status(200).json({ success: true, data: users });
@@ -29,6 +30,16 @@ const getAllUsers = (req, res) => {
     user.email = email || user.email;
     res.status(200).json({ success: true, data: user });
   };
+
+  // Validate email if provided
+  if (email && !validateEmail(email)) {
+    return res.status(400).json({ success: false, message: 'Invalid email format' });
+  }
+
+  user.name = name || user.name;
+  user.email = email || user.email;
+  res.status(200).json({ success: true, data: user });
+};
 
   const deleteUser = (req, res) => {
     const index = users.findIndex((u) => u.id === parseInt(req.params.id));
