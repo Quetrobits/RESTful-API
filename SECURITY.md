@@ -5,8 +5,10 @@ This security policy outlines the security features implemented in version **v1.
 | Version | Supported          |
 | ------- | ------------------ |
 | v1.0.0  | :white_check_mark: |
+| v1.1.0  | :white_check_mark: |
+| v1.2.0  | :x: |
 
-### Security Features in v1.0.0:
+### Security Features in v1.1.0:
 1. **XSS Protection**:
    - The application sanitizes user inputs to prevent Cross-Site Scripting (XSS) attacks. This is achieved by cleaning any potentially malicious scripts from user-generated data (e.g., form inputs, query parameters).
 
