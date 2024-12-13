@@ -11,6 +11,7 @@ This is a RESTful API built with **Node.js** and **Express**. It provides basic 
 - [Routes](#routes)
 - [Testing](#testing)
 - [License](#license)
+- [Wiki](https://github.com/Quetrobits/RESTful-API/wiki)
 
 ---
 
